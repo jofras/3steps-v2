@@ -3,66 +3,42 @@
 import { Routes, Route, Link, Outlet } from 'react-router-dom';
 import SectionBlock from '../components/SectionBlock';
 import kevin2 from '../images/kevin2.jpg';
-import livio2 from '../images/livio2.jpg';
-import ludmilla from '../images/ludmilla.jpg';
-import lukas2 from '../images/lukas2.jpg';
-import marlon from '../images/marlon.jpg';
-import cedric from '../images/squidward.jpg';
-import nahom from '../images/patrick2.jpg';
 
-export const staff = [
-  { id: 'kevin', name: 'Kevin', role: 'Founder & Head Coach, Hockey', image: kevin2, bio: 'Former professional athlete with 20+ years in youth sports development. Passionate about creating opportunities for every child to succeed.' },
-  { id: 'cedric', name: 'Cedric', role: 'Head Coach, Floorball', image: cedric, bio: 'Former professional athlete with 20+ years in youth sports development. Passionate about creating opportunities for every child to succeed.' },
-  { id: 'nahom', name: 'Nahom', role: 'Head Coach, Soccer', image: nahom, bio: 'Former professional athlete with 20+ years in youth sports development. Passionate about creating opportunities for every child to succeed.' },
-  { id: 'livio', name: 'Livio', role: 'Assistant Coach, Hockey', image: livio2, bio: 'Manages day-to-day operations, facility coordination, and ensures smooth program delivery across all sports.' },
-  { id: 'ludmilla', name: 'Ludmilla', role: 'Camp Supervisor', image: ludmilla, bio: 'Develops curriculum and coordinates coaches to ensure high-quality training programs for all age groups.' },
-  { id: 'lukas', name: 'Lukas', role: 'Assistant Coach, Hockey', image: lukas2, bio: 'Focuses on creating inclusive environments and developing character through sports for young athletes.' },
-  { id: 'marlon', name: 'Marlon', role: 'Assistant Coach, Hockey', image: marlon, bio: 'Builds partnerships with schools, community centers, and families to expand access to youth sports programs.' },
-];
+import TeamMemberCard from "../components/TeamMemberCard";
 
 function WhoWeAre() {
   return (
     <SectionBlock title="Who We Are" bg="white">
-      <div className="max-w-3xl mx-auto px-4">
-        <div className="flex flex-col md:flex-row items-start md:items-center gap-6">
-          {/* image */}
-          <img
-            src={kevin2}
-            alt="Kevin Kasper"
-            className="w-full md:w-64 aspect-square rounded-lg object-cover object-top shadow-md"
-          />
-
-          {/* text block: name, age, subtitles */}
-          <div className="flex flex-col justify-center h-full">
-            {/* name + age */}
-            <h3 className="text-4xl font-bold text-primary leading-tight">
-              Kevin Kasper
-              <span className="block text-sm font-normal text-gray-500 mt-1">21 years old</span>
-            </h3>
-
-            {/* subtitles */}
-            <div className="mt-4 space-y-1 text-textmid text-md font-medium max-w-xl">
-              <p>Founder 3 Steps Athletics & Lead Coach Ice Hockey</p>
-              <p>Active player for Ohio University D1 Ice Hockey Team</p>
-            </div>
-          </div>
-        </div>
-
-        {/* quote below, full width, no border */}
-        <div className="mt-8 max-w-3xl mx-auto px-4">
-          <p className="text-textdark text-base italic">
-            “I started playing hockey for the Lions organization when I was 5 years old. With an
-            exception of 2 seasons, one of which I played for the EHC Kloten and one that I had to
-            miss out because of my health, I played all those years as a Lion until the end of the
-            23/24 season. In 2022 I started 3 Steps Athletics and been coaching actively ever since. I
-            founded it to share my love for sports and help participants improve at it through a well-
-            rounded and holistic approach to training.”
-          </p>
-        </div>
+      <div className="max-w-3xl mx-auto px-4 mb-12">
+        <p className="text-textdark text-base leading-relaxed">
+          To promote sport and the younger generation, we offer our programs during the season break. 
+          In this way we help the “stars of tomorrow” to realize their dream. We are a young team, 
+          all with coaching experience and actively play ice hockey ourselves. That's why 
+          we know how to treat the participants and what it takes to become a professional. We 
+          look forward to getting to know you personally!
+        </p>
       </div>
+      <TeamMemberCard
+        imageSrc={kevin2}
+        name="Kevin Kasper"
+        age={21}
+        roles={[
+          "Founder 3 Steps Athletics & Lead Coach Ice Hockey",
+          "Active player for Ohio University D1 Ice Hockey Team",
+        ]}
+        quote={`I started playing hockey for the Lions organization when I was 5 years old. 
+        With an exception of 2 seasons, one of which I played for the EHC Kloten and one that I 
+        had to miss out because of my health, I played all those years as a Lion until the end of 
+        the 23/24 season. In 2022 I started 3 Steps Hockey and been coaching actively ever since. 
+        I founded it to share my love for sports and help participants improve at it through a well-rounded 
+        and holistic approach to training.`}
+      />
+      {/* Add more team members here as needed */}
     </SectionBlock>
   );
 }
+
+
 
 function OurPurpose() {
   return (
