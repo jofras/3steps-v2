@@ -5,8 +5,8 @@ import { Link, useLocation } from 'react-router-dom';
 import mainIcon from '../assets/main_icon_cropped.png';
 
 const navItems = [
-  // { label: 'Sports', to: '/sports' },
-  { label: 'Programs', to: '/programs' },
+  { label: 'Sports', to: '/sports' },
+  // { label: 'Programs', to: '/programs' },
   { label: 'Multimedia', to: '/multimedia', dropdown: [
     { label: 'Gallery', href: '/multimedia#photos' },
     { label: 'Videos', to: '/multimedia#videos' },

@@ -34,8 +34,7 @@ function App() {
             <Route path="/partners" element={<Partners />} />
             <Route path="/news" element={<News />} />
             <Route path="/multimedia/news/:slug" element={<NewsPost />} />
-            <Route path="/programs" element={<Programs />} />
-            <Route path="/signup" element={<Signup />} />
+            <Route path="/sports" element={<SportsPage />} />
             {/* More routes will be added here */}
           </Routes>
         </main>
