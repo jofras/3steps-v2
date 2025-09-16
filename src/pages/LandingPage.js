@@ -68,7 +68,7 @@ export default function LandingPage() {
         </p>
       </div>
 
-      {/* Sport Cards */}
+      {/* Sport Cards
       <div className="flex flex-col md:flex-row gap-6 justify-center items-center mt-12 z-20 relative">
         {sports.map((sport) => (
           <Link to={sport.path} key={sport.name} className="bg-white rounded-xl shadow-lg hover:scale-105 hover:shadow-2xl transition-transform duration-200 w-64 flex flex-col items-center p-4 cursor-pointer">
@@ -76,7 +76,17 @@ export default function LandingPage() {
             <span className="font-heading text-xl font-bold text-primary mb-1">{sport.name}</span>
           </Link>
         ))}
-      </div>
+      </div> */}
+
+      {/* Signup Button
+      <div className="flex justify-center mt-10">
+        <Link
+          to="/signup"
+          className="bg-accent text-white px-6 py-3 rounded-full text-lg font-semibold shadow hover:bg-green-600 transition"
+        >
+          Go to Signup Page
+        </Link>
+      </div> */}
 
       {/* More sections will go here */}
 
