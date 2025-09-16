@@ -10,7 +10,9 @@ import Multimedia from './pages/Multimedia';
 import Partners from './pages/Partners';
 import News from './pages/News';
 import NewsPost from './pages/NewsArticle';
-import SportsPage from './pages/SportsPage'
+import SportsPage from './pages/SportsPage';
+import Programs from './pages/Programs';
+import Signup from './pages/Signup';
 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -32,7 +34,8 @@ function App() {
             <Route path="/partners" element={<Partners />} />
             <Route path="/news" element={<News />} />
             <Route path="/multimedia/news/:slug" element={<NewsPost />} />
-            <Route path="/sports" element={<SportsPage />} />
+            <Route path="/programs" element={<Programs />} />
+            <Route path="/signup" element={<Signup />} />
             {/* More routes will be added here */}
           </Routes>
         </main>
