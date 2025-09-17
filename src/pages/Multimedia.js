@@ -163,36 +163,31 @@ export default function Multimedia() {
           <p className="text-gray-600 text-base md:text-lg mb-8 max-w-2xl mx-auto">
             Stay updated with the latest happenings and achievements at 3 Steps Athletics
           </p>
-          
-          {/* Add a flex wrapper for centering */}
-          <div className="flex justify-center">
-            {/* Change grid to inline-grid */}
-            <div className="inline-grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {newsItems.map((item, i) => (
-                <Link
-                  key={i}
-                  to={`/multimedia/news/${item.slug}`}
-                  className="bg-white rounded-xl shadow-lg hover:shadow-2xl hover:scale-102 transition-all duration-200 p-6 text-left group"
-                >
-                  <div className="flex flex-col h-full">
-                    <h3 className="font-heading text-lg font-bold text-primary mb-2 group-hover:text-blue-600 transition-colors">
-                      {item.title}
-                    </h3>
-                    <p className="text-sm text-gray-500 mb-3 font-medium">
-                      {item.date}
-                    </p>
-                    <p className="text-sm text-gray-600 flex-grow leading-relaxed">
-                      {item.excerpt}
-                    </p>
-                    <div className="mt-4 pt-3 border-t border-gray-100">
-                      <span className="text-xs text-primary font-semibold uppercase tracking-wide group-hover:text-blue-600 transition-colors">
-                        Read More →
-                      </span>
-                    </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {newsItems.map((item, i) => (
+              <Link
+                key={i}
+                to={`/multimedia/news/${item.slug}`}
+                className="bg-white rounded-xl shadow-lg hover:shadow-2xl hover:scale-102 transition-all duration-200 p-6 text-left group"
+              >
+                <div className="flex flex-col h-full">
+                  <h3 className="font-heading text-lg font-bold text-primary mb-2 group-hover:text-blue-600 transition-colors">
+                    {item.title}
+                  </h3>
+                  <p className="text-sm text-gray-500 mb-3 font-medium">
+                    {item.date}
+                  </p>
+                  <p className="text-sm text-gray-600 flex-grow leading-relaxed">
+                    {item.excerpt}
+                  </p>
+                  <div className="mt-4 pt-3 border-t border-gray-100">
+                    <span className="text-xs text-primary font-semibold uppercase tracking-wide group-hover:text-blue-600 transition-colors">
+                      Read More →
+                    </span>
                   </div>
-                </Link>
-              ))}
-            </div>
+                </div>
+              </Link>
+            ))}
           </div>
         </section>
       </div>
